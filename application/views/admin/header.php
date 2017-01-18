@@ -56,6 +56,9 @@
                     <li>
                       <a href="<?php echo base_url(); ?>index.php/admin/welcome/blog"><i class="fa fa-fw fa-user"></i> Blog</a>
                     </li>
+                    <li>
+                      <a href="<?php echo base_url(); ?>index.php/admin/welcome/video"><i class="fa fa-fw fa-user"></i> Video</a>
+                    </li
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

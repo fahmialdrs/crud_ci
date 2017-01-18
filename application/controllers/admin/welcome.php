@@ -116,4 +116,34 @@ class Welcome extends CI_Controller {
       $this->session->unset_userdata('logged_in');
       redirect('admin/login');
     }
+
+    public function video(){
+      $data['record'] = $this->uploads->getVideo();
+      $this->load->view('admin/header');
+      $this->load->view('admin/video', $data);
+      $this->load->view('admin/footer');
+  }
+  public function tambahvideo(){
+    $this->load->view('admin/header');
+    $this->load->view('admin/tambah_video');
+    $this->load->view('admin/footer');
+  }
+  public function insert_video(){
+    $nama_video = $this->input->post('nama_video');
+    $url  = $this->input->post('url');
+    $deskripsi  = $this->input->post('deskripsi');
+
+    $data = array(
+      'nama_video' => $nama_video, 
+      'url' => $url,
+      'deskripsi' => $deskripsi
+      );
+
+    $this->uploads->insert_video($data, 'video');
+    redirect('admin/welcome/video');
+    }
+    function do_hapus_video($id) {
+        $this->uploads->do_hapus_video($id);
+        redirect('admin/welcome/video');
+    }
 }

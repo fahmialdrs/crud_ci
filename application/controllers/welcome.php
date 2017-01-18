@@ -7,8 +7,9 @@ class Welcome extends CI_Controller {
 		}
 
 	public function index(){
+		$data['record'] = $this->uploads->getVideo();
 		$this->load->view('header');
-		$this->load->view('home');
+		$this->load->view('hom', $data);
 		$this->load->view('footer');
 	}
 

@@ -85,6 +85,7 @@ body {
     <input type="text" name="username" placeholder="Username" id="username" />
     <input type="password" name="password" placeholder="Password" id="password" />
     <button>Login</button>
+    <a href="<?php echo base_url(); ?>index.php" class="btn">Homepage</a>
 </div>
 </body>
 

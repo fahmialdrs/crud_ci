@@ -2,6 +2,7 @@
 class Uploads extends CI_Model {
 
   var $tabel1 = 'blog';//tabel gambar di database ci_graphic
+  var $tabel2 = 'video';//tabel gambar di database ci_graphic
 
     function __construct() {
         parent::__construct();
@@ -33,5 +34,19 @@ class Uploads extends CI_Model {
         $this->db->delete('blog', array('id' => $id));
         // redirect('admin/welcome/blog');
     }
+
+    function insert_video($data){
+       $this->db->insert($this->tabel2, $data);
+       return TRUE;
+    }
+
+    function getVideo() {
+         return $this->db->get('video');
+    }
+    function do_hapus_video($id) {
+        $this->db->delete('video', array('id' => $id));
+        // redirect('admin/welcome/blog');
+    }
+
 
 }

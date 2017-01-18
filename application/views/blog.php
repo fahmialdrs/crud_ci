@@ -1,5 +1,5 @@
 <div class="container" style="text-align:justify;">
-      <h1 class="text-center">Informasi Mengenai Duniawi !!!</h1>
+      <h1 class="text-center">Blog Fakta Menarik Fisika</h1>
       <?php foreach ($record->result_array() as $list) { ?>
       <div class="row">
         <div class="col-sm-4" style="margin:10px 0;">
